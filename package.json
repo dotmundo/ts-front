@@ -1,0 +1,26 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && esbuild html/src/front.ts --bundle --outfile=html/dist/front.js --format=iife --sourcemap",
+    "watch": "esbuild html/src/front.ts --bundle --outfile=html/dist/front.js --format=iife --sourcemap --watch"
+  },
+  "keywords": [],
+  "author": "Raul R <raulrodrigueznyc@gmail.com>",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
