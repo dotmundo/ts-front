@@ -1,10 +1,9 @@
-// Imports
-import {createElement} from 'react';
-import {createRoot} from 'react-dom/client';
-import {ContentBrowser} from './components/ContentBrowser';
+// Entry point. Mounts the React app into <div id="app"> from index.html.
+import { createElement } from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
 
-const contentEl = document.getElementById('front-content-browser');
-if (contentEl) {
-    console.log(contentEl)
-    createRoot(contentEl).render(createElement(ContentBrowser));
+const container = document.getElementById('app');
+if (container) {
+    createRoot(container).render(createElement(App));
 }

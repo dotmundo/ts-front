@@ -1,4 +1,95 @@
-div.front-container {
-    border: solid red;
-    padding: 15rem;
+/* front.css — styles for the decoupled front-end.
+   One block per region component. Header + Menu for now. */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1b1b1d;
+    background: #fff;
+}
+
+/* ---- Site header ---------------------------------------------------- */
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    padding: 0.85rem 1.5rem;
+    background: #1b1b1d;
+    color: #fff;
+}
+
+.site-header__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header__logo {
+    display: block;
+    height: 36px;
+    width: auto;
+}
+
+.site-header__name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.site-header__slogan {
+    flex-basis: 100%;
+    order: 3;               /* drop below the brand/menu row */
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* loading / error variants share the bar, minus the flex layout */
+.site-header--status {
+    display: block;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.site-header--error {
+    background: #b3261e;
+}
+
+/* ---- Menu --------------------------------------------------------- */
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu__link:hover,
+.menu__link:focus-visible {
+    text-decoration: underline;
+}
+
+/* nested sub-menus: indented column under their parent */
+.menu__item .menu__list {
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+    padding-left: 1rem;
+    font-weight: 400;
 }

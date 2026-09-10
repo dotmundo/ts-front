@@ -1,18 +1,16 @@
 {
-  "name": "front",
+  "name": "ts-front",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Example decoupled (headless) front-end for a Drupal CMS — React + TypeScript region components.",
+  "repository": "github:dotmundo/ts-front",
+  "author": "Raul R <raulrodrigueznyc@gmail.com>",
+  "license": "ISC",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc --noEmit",
     "build": "npm run typecheck && esbuild html/src/front.ts --bundle --outfile=html/dist/front.js --format=iife --sourcemap",
     "watch": "esbuild html/src/front.ts --bundle --outfile=html/dist/front.js --format=iife --sourcemap --watch"
   },
-  "keywords": [],
-  "author": "Raul R <raulrodrigueznyc@gmail.com>",
-  "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",

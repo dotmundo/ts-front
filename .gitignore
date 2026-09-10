@@ -1,3 +1,6 @@
 .DS_Store
 node_modules
-html/src/dist/*
+.idea
+
+# Build output — run `npm run build` to regenerate.
+html/dist
